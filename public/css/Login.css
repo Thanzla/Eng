@@ -1,0 +1,197 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../pic/engro1.webp') no-repeat center center;
+  background-size: cover; /* Cover the entire body area */
+  background-position: center;
+  position: relative;
+}
+
+/* Ensure the image adapts to smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Adjust to fit the image within the body */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: contain; /* Image fits within the screen on small devices */
+    background-position: top center; /* Adjust positioning */
+  }
+}
+
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.wrapper {
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity for elegance */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+.wrapper:hover {
+  transform: scale(1.02);
+}
+
+/* Form Heading */
+.wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  background: linear-gradient(45deg, #0ad185, #f7971e);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Input Box Styling */
+.input-box {
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.input-box input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #0ad185;
+}
+
+.input-box input::placeholder {
+  color: #ffffffb3;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  color: #ffffffb3;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Remember and Forget Password */
+.remember-forget {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #ffffffb3;
+}
+
+.remember-forget label input {
+  accent-color: #0ad185;
+  margin-right: 5px;
+}
+
+.remember-forget a {
+  color: #0ad185;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.remember-forget a:hover {
+  color: #f7971e;
+}
+
+/* Login Button */
+.wrapper .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  background: linear-gradient(135deg, #0ad185, #f7971e);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wrapper .btn:hover {
+  background: linear-gradient(135deg, #f7971e, #0ad185);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Register Link */
+.register-link {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+.register-link p a {
+  color: #0ad185;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link p a:hover {
+  color: #f7971e;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .wrapper {
+      padding: 30px 15px;
+  }
+
+  .wrapper h1 {
+      font-size: 2rem;
+  }
+
+  .input-box input {
+      padding: 12px 15px;
+  }
+
+  .input-box i {
+      font-size: 1rem;
+      right: 15px;
+  }
+
+  .remember-forget {
+      font-size: 0.8rem;
+  }
+
+  .wrapper .btn {
+      font-size: 0.9rem;
+  }
+}
